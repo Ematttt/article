@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTU-DANAO CAMPUS</title>
+    <script src="https://kit.fontawesome.com/1d3b8b90fb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="script" href="script.js" class="js">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="images/logo.png" alt="CTU Logo">
+            CEBU TECHNOLOGICAL UNIVERSITY - DANAO CAMPUS</a>
+        <div class="menu-btn"></div>
+        <div class="navbar">
+            <div class="navbar-items">
+                <a href="#home">HOME</a>
+                <div class="activities-dropdown">
+                    <a href="#activities" class="dropdown-button">ACTIVITIES</a>
+                    <div class="dropdown-content">
+                        <a href="#first-day-of-school">First Day of School</a>
+                        <a href="#">Coming Soon</a>
+                        <a href="#">Coming Soon</a>
+                    </div>
+                </div>
+                <a href="#about">ABOUT</a>
+                <a href="#" class="sign-in">SIGN IN</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="home">
+        <div class="content">
+            <h1>Welcome,<br><span>Technologist!</span></h1>
+            <p>Cebu Technological University - Danao Campus proudly welcomes future innovators and leaders like you. 
+                As you begin your academic journey, you'll find a vibrant community dedicated to advancing knowledge and real-world skills. 
+                Stay tuned for updates on the latest activities, achievements, and opportunities that shape our students and community. 
+                Your path to excellence starts here!</p>
+            <a href="#about">Read More</a>
+        </div>
+
+        <div class="media">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </section>
+
+    <section id="activities" class="activities">
+        <div class="content">
+            <h2>Our Activities</h2>
+            <p>At Cebu Technological University - Danao Campus, we believe in the importance of a well-rounded education that extends beyond the classroom. Our activities are designed to foster personal and professional growth, community engagement, and teamwork. Here are some of the key activities we organize:</p>
+            <ul>
+                <li><strong>Workshops and Seminars:</strong> Regular workshops and seminars on various topics to enhance skills and knowledge.</li>
+                <li><strong>Community Outreach:</strong> Initiatives aimed at giving back to the community and promoting social responsibility.</li>
+                <li><strong>Cultural Events:</strong> Celebrating diversity through cultural showcases and events that highlight local traditions.</li>
+                <li><strong>Sports Competitions:</strong> Encouraging teamwork and physical fitness through inter-school competitions.</li>
+                <li><strong>Research Conferences:</strong> Providing a platform for students to present their research and innovations.</li>
+            </ul>
+            <p>Join us as we engage in meaningful activities that enrich our university experience!</p>
+        </div>
+    </section>
+
+    <section id="first-day-of-school" class="first-day">
+        <div class="content">
+
+            <h2>First Day of School</h2>
+            
+                <p>Welcome to the School Year 2024-2025 at Cebu Technological University - Danao Campus! 
+                As we embark on this exciting academic journey, we are presented with fresh opportunities and the promise of growth. 
+                This year's theme, "Sug-Alapas 2024," emphasizes our journey in navigating our educational paths. 
+                It serves as a reminder that success requires determination, resilience, and a strong sense of responsibility. 
+                Each Technologist is encouraged to aim higher, as our aspirations reflect what we truly deserve. 
+                Together, we can foster an environment that nurtures our ambitions and encourages personal development.
+                <img src="images/par1.jpg" class="align-right">
+                </p>
+            
+                <p>As we kick off this semester, it’s time to ignite our passions and make a meaningful impact. 
+                The theme "Navigating Success: Unbolting Academic Path" invites us to view every class as an opportunity for personal discovery and connection. 
+                By actively engaging with peers and instructors, we can enrich our academic experience and transform challenges into stepping stones for success. 
+                Let’s embrace this year with enthusiasm, ready to support each other in achieving our goals.
+                <img src="images/par2.jpg" class="align-left">
+                </p>
+    
+                <p>On this first day of school, let’s build a vibrant and inclusive community where everyone feels valued and inspired. 
+                Each student brings unique talents and perspectives that will enhance our collective journey. 
+                By remaining open to new experiences and possibilities, we can create lasting memories and impactful achievements together. 
+                Let this year be one of growth, collaboration, and shared success, as we light up our paths at Cebu Technological University - Danao Campus!
+                <img src="images/par3.jpg" class="align-right">
+                </p>
+        </div>
+    </section>
+    
+
+    <section id="about" class="about">
+        <div class="content">
+            <h2>About the CTU - Danao Campus</h2>
+            <p>Cebu Technological University – Danao Campus is a premier institution of higher learning located in the heart of Danao City, Cebu. 
+                Known for its commitment to academic excellence and innovative research, the campus offers a wide range of undergraduate and graduate programs that cater to the diverse needs of students. 
+                With state-of-the-art facilities, a dynamic learning environment, and a highly qualified faculty, CTU Danao equips students with the knowledge and skills to excel in their chosen fields. 
+                The campus is deeply engaged with the local community, fostering partnerships that contribute to regional development and global competitiveness. 
+                Whether you are pursuing a career in technology, business, education, or other disciplines, 
+                CTU Danao provides a nurturing and forward-thinking environment for your academic and professional growth.</p>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const navbar = document.querySelector(".navbar");
+
+        menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navbar.classList.toggle("active");
+        });
+    </script>
+
+</body>
+</html>

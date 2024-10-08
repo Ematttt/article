@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    background-color: #660000;
+    transition: 0.5s ease;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;           /* Align logo image and text side by side */
+    align-items: center;     /* Vertically center the logo and text */
+}
+
+header .logo img {
+    width: 40px;             /* Adjust the logo width */
+    height: 40px;            /* Adjust the logo height */
+    margin-right: 10px;      /* Space between logo and text */
+    object-fit: contain;     /* Keep the aspect ratio of the logo */
+}
+
+header .navbar{
+    position: relative;
+    background-color: #660000;
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center items */
+}
+
+header .navbar .navbar-items {
+    display: flex; /* Ensure the navbar items are in a row */
+    align-items: center; /* Align items vertically */
+}
+
+header .navbar .navbar-items a{
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px; 
+    transition: 0.3s ease;
+}
+
+header .navbar .navbar-items a:before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navbar .navbar-items a:hover:before{
+    width: 100%;
+}
+
+section{
+    padding: 100px 200px;
+    min-height: 100vh;
+    display: flex;
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #330000;
+    height: 100%;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/front.jfif) center/cover no-repeat;
+    background-color: rgba(51, 0, 0, 0.5);
+    opacity: 0.27;
+    z-index: 1;
+}
+
+.home > * {
+    position: relative;
+    z-index: 2;
+}
+
+.home .content{
+    z-index: 888;
+    color:#fff;
+    width: 70%;
+    margin-top: 50px;
+}
+
+.home .content h1{
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+}
+
+.home .content p{
+    margin-bottom: 65px;
+    text-align: justify;
+}
+
+.home .content a{
+    background: #fff;
+    padding: 10px 25px;
+    color: #990000;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.home .media{
+    z-index: 888;
+    position: absolute;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+
+.home .media a{
+    color: #fff;
+    size: 1.6em;
+    transition: 0.3s ease;
+}
+
+.home .media a:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.home .media a:hover{
+    transform: scale(1.5);
+}
+
+@media (max-width: 1040px){
+    header{
+        padding: 12px 20px;
+    }
+
+    section{
+        padding: 100px 20px;
+    }
+
+    .home .media{
+        right: 15px;
+    }
+
+    header .navbar{
+       display: none;
+    }
+
+    header .navbar.active{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+     }
+
+    header .navbar .navbar-items a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px; 
+    }
+
+    header .navbar .navbar-items a:before{
+        background: #222;
+        height: 5px;
+    }
+
+    header .navbar.active .navbar-items{
+        background: #fff;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    }
+
+    .menu-btn{
+        background: url(images/menu.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .menu-btn.active{
+        z-index: 999;
+        background: url(images/close.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        transition: 0.3s ease
+    }
+}
+
+.activities-dropdown {
+    position: relative; 
+    margin-left: 30px; 
+}
+
+.dropdown-button {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px; 
+    transition: 0.3s ease;
+}
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: crimson; 
+    min-width: 160px; 
+    z-index: 1;
+}
+
+.activities-dropdown:hover .dropdown-content {
+    display: block; 
+}
+
+.dropdown-content a {
+    color: white; 
+    padding: 12px 16px; 
+    text-decoration: none;
+    display: block; 
+    transition: 0.3s ease; 
+}
+
+.dropdown-content a:hover {
+    background-color: #990000; 
+}
+
+.first-day {
+    padding: 50px 200px;
+    background-color: #f9f9f9; 
+    color: #333; 
+}
+
+.first-day .content {
+    max-width: 900px; 
+    margin: auto;
+    padding: 20px; 
+}
+
+.first-day .content img {
+    max-width: 75%;  /* Set the maximum width of the image */
+    height: auto;    /* Maintain aspect ratio */
+    margin: 10px auto; /* Center the image and add top/bottom margins */
+    display: block;  /* Make the image a block element to allow margin auto to work */
+}
+
+
+.first-day .content p::after {
+    content: "";
+    display: table;
+    clear: both; 
+}
+
+.first-day h2 {
+    text-align: center; 
+    color: #990000;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    text-transform: uppercase;
+}
+
+.first-day p {
+    margin-bottom: 10px; 
+    text-align: justify;
+}
+
+.about p{
+    text-align: justify;
+
+}
+
+.about h2{
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 75px;
+}
