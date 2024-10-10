@@ -324,3 +324,168 @@ section{
     letter-spacing: 4px;
     line-height: 75px;
 }
+
+#contact-section {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #990000;
+    border-radius: 15px;
+    padding: 60px 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    margin: 10px auto 10px; /* Increased margin to give more white space */
+    scroll-margin-top: 100px; /* Adjust scroll-margin-top */
+}
+
+.title, .intro {
+    text-align: center;
+    color: white;
+}
+
+.title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.intro {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.contact-method {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white; /* Ensure the text is white and visible */
+    flex: 1 1 auto; /* Allow the sections to grow and display content */
+    min-width: 200px;
+    position: relative;
+    z-index: 10; 
+}
+
+.contact-method h2 {
+    font-size: 1.8em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.contact-method p {
+    font-size: 1.2em;
+    color: white;
+    margin: 5px 0;
+    display: block; /* Ensure the paragraph is displayed correctly */
+}
+
+.contact-method .media1 a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+.contact-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.contact-form {
+    background-color: #330000;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+label {
+    font-size: 1.2em;
+    display: block;
+    color: white;
+    margin-bottom: 10px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: #990000;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #cc3333;
+}
+
+.contact-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #990000;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: "Poppins", sans-serif; /* Ensure Poppins font is used */
+}
+
+.contact-float:hover {
+    background-color: #cc3333;
+    transform: scale(1.1);
+}
+
+.contact-float i {
+    pointer-events: none; /* To make sure only the button is clickable */
+}
+
+.contact-text {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #990000;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-family: "Poppins", sans-serif; /* Ensure Poppins font is used */
+}
+
+.contact-float:hover .contact-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Adjust the floating button on smaller screens */
+@media (max-width: 1040px) {
+    .contact-float {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .contact-text {
+        right: 60px;
+    }
+}

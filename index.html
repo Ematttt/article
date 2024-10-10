@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <a href="#about">ABOUT</a>
-                <a href="#" class="sign-in">SIGN IN</a>
+                <a href="login.html" class="sign-in">SIGN IN</a>
             </div>
         </div>
     </header>
@@ -48,6 +48,11 @@
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
         </div>
+
+        <a href="#contact-section" class="contact-float">
+            <i class="fas fa-envelope"></i>
+            <span class="contact-text">CONTACT US</span>
+        </a>
     </section>
 
     <section id="activities" class="activities">
@@ -108,17 +113,64 @@
         </div>
     </section>
 
-    <script type="text/javascript">
-        const menuBtn = document.querySelector(".menu-btn");
-        const navbar = document.querySelector(".navbar");
+    <section id="contact-section">
+        <div class="container">
+            <h1 class="title">ANY CONCERNS? CONTACT US</h1>
+            <p class="intro">We, technologist, are always ready to receive critique in order for this website to be improved. We value everyone who takes their time visiting us!</p>
 
-        menuBtn.addEventListener("click", () => {
-        menuBtn.classList.toggle("active");
-        navbar.classList.toggle("active");
-        });
-    </script>
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <div class="contact-method">
+                    <h2>Email Us</h2>
+                    <a href="alegadoraymart@gmail.com" class="contact-link">alegadoraymart@gmail.com</a>
+                </div>
+                <div class="contact-method">
+                    <h2>Call Us</h2>
+                    <p class="contact-text">09693691348</p>
+                    <p class="contact-text">Mon-Fri, 9 AM - 6 PM</p>
+                </div>
+                <div class="contact-method">
+                    <h2>Visit The Campus</h2>
+                    <p class="contact-text">Sabang, Danao City/p>
+                    <p class="contact-text">Open by Appointment</p>
+                </div>
+                <div class="contact-method">
+                    <h2>Social Channels</h2>
+                    <div class="media1">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form id="contact-form" class="form">
+                <h2>Get Personal</h2>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4" placeholder="What would you like to chat about?"></textarea>
+
+                <label for="contact-method">Preferred Contact Method:</label>
+                <select id="contact-method">
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                    <option value="zoom">Zoom Meeting</option>
+                </select>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 
     <iframe src="login.html" style="position: absolute; width:0; height:0; border:0;"></iframe>
-    
+
 </body>
 </html>
